@@ -105,8 +105,8 @@ void removeElement(SET *sp, char *elt) {
     assert(sp != NULL && elt != NULL);
     //finds the position of the elt
     int loc = search(sp,elt,&isDup);
-    //if the position isn't -1 (meaning it exists), then it'll delete it and move the last element to it's spot
-    if(isDup == false) {
+    //if the element boolean is true (meaning it exists), then it'll delete it and set a delete flag
+    if(isDup == true) {
         //frees the string
         free(sp->data[loc]);
         //then flags as deleted
