@@ -13,7 +13,7 @@
 typedef struct set {
     int count;
     int length;
-    void ** data;
+    void **data;
     int *flag;
     int (*compare)();
     unsigned (*hash)();
