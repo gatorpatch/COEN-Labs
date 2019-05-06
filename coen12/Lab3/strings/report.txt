@@ -2,26 +2,26 @@ Strings
 ===================================
 unique                      Time
 -----------------------------------
-Bible.txt                   0.150s
+Bible.txt                   0.111s
 Genesis.txt                 0.016s
-GreenEggsAndHam.txt         0.011s
-HoundOfTheBaskervilles.txt  0.019s
-Macbeth.txt                 0.015s
-TheCountOfMonteCristo.txt   0.089s
-TheSecretGarden.txt         0.021s
-TheWarOfTheWorlds.txt       0.022s
-TreasureIsland.txt          0.029s
-TwentyThousandLeagues.txt   0.027s
+GreenEggsAndHam.txt         0.007s
+HoundOfTheBaskervilles.txt  0.016s
+Macbeth.txt                 0.011s
+TheCountOfMonteCristo.txt   0.080s
+TheSecretGarden.txt         0.018s
+TheWarOfTheWorlds.txt       0.016s
+TreasureIsland.txt          0.017s
+TwentyThousandLeagues.txt   0.023s
 
 parity                      Time
 -----------------------------------
-Bible.txt                   0.148s                   
-Genesis.txt                 0.015s
+Bible.txt                   0.414s                   
+Genesis.txt                 0.021s
 GreenEggsAndHam.txt         0.008s
-HoundOfTheBaskervilles.txt  0.020s
-Macbeth.txt                 0.013s
-TheCountOfMonteCristo.txt   0.109s
-TheSecretGarden.txt         0.024s
-TheWarOfTheWorlds.txt       0.020s
-TreasureIsland.txt          0.021s
-TwentyThousandLeagues.txt   0.029s
+HoundOfTheBaskervilles.txt  0.031s
+Macbeth.txt                 0.016s
+TheCountOfMonteCristo.txt   3.971s
+TheSecretGarden.txt         0.035s
+TheWarOfTheWorlds.txt       0.028s
+TreasureIsland.txt          0.033s
+TwentyThousandLeagues.txt   0.046s
