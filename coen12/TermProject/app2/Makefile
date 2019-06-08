@@ -6,4 +6,4 @@ all:		$(PROGS)
 
 clean:;		$(RM) $(PROGS) *.o core
 
-college:	$(CC) -o college.c
+college:	$(CC) -o college college.c
