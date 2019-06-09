@@ -9,11 +9,9 @@ typedef struct set SET;
 
 extern SET *createDataSet(int maxElts);
 
-extern LIST *createList(int listAge);
-
 extern void destroyDataSet(SET *sp);
 
-extern LIST *searchAge(SET *sp,int age);
+extern int searchAge(SET *sp,int age);
 
 extern void insertElement(SET *sp,int age,int id);
 

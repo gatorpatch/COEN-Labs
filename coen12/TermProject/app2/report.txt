@@ -1,0 +1,11 @@
+Big-O Values of the Functions:
+==============================
+createDataSet           O(n)
+destroyDataSet          O(n)
+searchID                O(1)
+insertion               O(1)
+deletion                O(1)
+
+Data Structure Explanation:
+===========================
+I choose to use the student IDs as the hash value, since they are unique, therefore makingit easy to hash. This makes the search speed really fast, which helps the school since they frequently search based on these IDs. I thought about using other more complicated structures, however the simplicity of the array is easiest for a school that has a set student body limit, and can afford to literally have a finite amount of slots that can be filled

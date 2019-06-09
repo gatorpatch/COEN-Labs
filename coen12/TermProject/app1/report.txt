@@ -1,0 +1,12 @@
+Big-O Notation for app1:
+========================
+createDataSet       O(n)
+destroyDataSet      O(n)
+searchAge           O(n)
+insertion           O(1)
+deletetion          O(1)
+maxAgeGap           O(1)
+
+Data Structure Choice:
+======================
+I choose to use a simple hash to an array of linked lists, which makes it easy to find students based on age since there are a finite number of ages students can be. While the Big-O notation is O(n) for search, which is not as good as it could be, that worst case only because the search function has to print out the amount of people in the linked list. The structure made it so that my maxAgeGap function was super fast O(1). I really couldn't think of a way to make the search function faster given that it always has to print out the entire list, other than maybe using something faster than a linked list to print.
