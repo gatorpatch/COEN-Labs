@@ -35,11 +35,11 @@ SET *createDataSet(int maxElts) {
     assert(sp != NULL);
     sp->count = 0;
     sp->length = maxElts;
-    sp->lists = malloc(sizeof(LIST*)*12);
+    sp->lists = malloc(sizeof(LIST*)*13);
     assert(sp->lists != NULL);
     for(i = 0;i < 13;i++) {
         sp->lists[i] = createList(i + 18);
-        //int value = sp->lists[i]->count;
+        //int value= sp->lists[i]->count;
         //printf("countVal:%d\n",value);
     }
     return sp;

@@ -45,7 +45,7 @@ void destroyList(LIST *lp) {
     NODE *nextD, *currentD;
     assert(lp != NULL);
     currentD = lp->head;
-    do {
+	do {
         nextD = currentD->next;
         free(currentD);
         currentD = nextD;
