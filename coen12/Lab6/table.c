@@ -223,7 +223,7 @@ void *findElement(SET *sp, void *elt)
     return found ? sp->data[locn] : NULL;
 }
 
-//Simple swap function used to find the midpoint and also to sort the array
+//Simple swap function used to sort the array
 //O(1)
 void swap(void *array[], int loc1, int loc2) {
     void *temp = NULL;
@@ -232,46 +232,23 @@ void swap(void *array[], int loc1, int loc2) {
     array[loc2] = temp;
 }
 
-//Takes the bounds given in the left and right, and finds the midpoint's correct place in the full array, which allows the program to correctly sort around that pivot in the correct place
-//O(1)
-void *midPoint(void *array[], int left, int right,int (*compare)()) {
-    int midPoint = (right - left) / 2;
-
-    if(compare(array[left],array[right]) < 0) {
-        swap(array, left, right);
-    }
-    if(compare(array[left],array[midPoint]) < 0) {
-        swap(array, left, midPoint);
-    }
-    if(compare(array[midPoint], array[right]) < 0) {
-        swap(array, midPoint, right);
-    }
-    return array[midPoint];
-}
-
-//Partitions the array based on the midpoint from the midpoint function, interating through the list until all things are on the correct side of the pivot
+//Partitions the array and sorts 
 //O(n)
 int partition(void *array[], int low, int high, int (*compare)()) {
-    void *pivot = midPoint(array, low, high, compare);
-    int left = low;
-    int right = high;
-    while(left < right) {
-        while(compare(array[left],pivot) > 0) {
-            left++;
-        }
-        while(compare(array[right],pivot) < 0) {
-            right--;
-        }
-        if(left <= right) {
-            swap(array, left, right);
-            left++;
-            right--;
+    void *pivot = array[high];
+    int i,j;
+    i = low - 1;
+    for(j = low; j <= high - 1;j++) {
+        if(compare(array[j],pivot) <= 0) {
+            i++;
+            swap(array,i,j);
         }
     }
-    return left;
+    swap(array,(i+1),high);
+    return i + 1;
 }
 
-//A quicksort function that sorts around a midpoint pivot
+//A quicksort function that sorts around a pivot
 //O(n)
 void quickSort(void *array[], int low, int high, int (*compare)()) {
     if(low < high) {
